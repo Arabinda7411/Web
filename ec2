@@ -25,4 +25,3 @@
       assign_public_ip: yes
       instance_tags: 
         Name: web
-
