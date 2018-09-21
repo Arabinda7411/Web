@@ -1,0 +1,13 @@
+---
+- hosts: webserver
+  remote_user: ec2-user
+  become: yes
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      pkg: httpd
+      state: present
+  - name: Start service httpd, if not running
+    service:
+      name: httpd
+      state: started
